@@ -57,6 +57,8 @@ class Scraper
     profile[:profile_quote] = doc.css("div.profile-quote").text
     profile[:bio] = doc.css("div.description-holder p").text
 
+    profile
+    
     #binding.pry
     #my_hash[:key] = "value"
     #Use Joe Burgess - he has every kind of link: https://learn-co-curriculum.github.io/student-scraper-test-page/students/joe-burgess.html
