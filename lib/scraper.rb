@@ -31,7 +31,8 @@ class Scraper
 
   def self.scrape_profile_page(profile_url)
     #full_url = "https://learn-co-curriculum.github.io/student-scraper-test-page/" + profile_url
-    doc = Nokogiri::HTML(open(full_url))
+    #doc = Nokogiri::HTML(open(full_url))
+    doc = Nokogiri::HTML(open(profile_url))
 
     profile = {}
 
