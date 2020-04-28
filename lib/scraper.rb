@@ -34,7 +34,7 @@ class Scraper
     doc = Nokogiri::HTML(open(full_url))
 
     profile = {}
-    
+
     twitterURL = nil;
     linkedinURL = nil;
     githubURL = nil;
@@ -49,15 +49,15 @@ class Scraper
       elsif item.attribute("href").value.include? "github"
         profile[:github] = item.attribute("href").value
       else
-        profile[:blog] = item.attribute("href").value  
-      end    
+        profile[:blog] = item.attribute("href").value
+      end
     end
 
     profile[:profile_quote] = doc.css("div.profile-quote").text
     profile[:bio] = doc.css("div.description-holder p").text
-    
+
     binding.pry
-    
+
     #my_hash[:key] = "value"
     #Use Joe Burgess - he has every kind of link: https://learn-co-curriculum.github.io/student-scraper-test-page/students/joe-burgess.html
     #Social icon container:
