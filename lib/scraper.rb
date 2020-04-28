@@ -41,7 +41,7 @@ class Scraper
     blogURL = nil;
 
     #Get the social URLs (if they exist)
-    for doc.css("div.social-icon-container a").each |item| do
+    doc.css("div.social-icon-container a").each |item| do
       if item.attribute("href").value.include? "twitter"
         profile[:twitter] = item.attribute("href").value
       elsif item.attribute("href").value.include? "linkedin"
