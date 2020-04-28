@@ -56,8 +56,7 @@ class Scraper
     profile[:profile_quote] = doc.css("div.profile-quote").text
     profile[:bio] = doc.css("div.description-holder p").text
 
-    binding.pry
-
+    #binding.pry
     #my_hash[:key] = "value"
     #Use Joe Burgess - he has every kind of link: https://learn-co-curriculum.github.io/student-scraper-test-page/students/joe-burgess.html
     #Social icon container:
@@ -82,5 +81,5 @@ class Scraper
 
 end
 
-Scraper.scrape_index_page("https://learn-co-curriculum.github.io/student-scraper-test-page/index.html")
-Scraper.scrape_profile_page("students/joe-burgess.html")
+#Scraper.scrape_index_page("https://learn-co-curriculum.github.io/student-scraper-test-page/index.html")
+#Scraper.scrape_profile_page("students/joe-burgess.html")
